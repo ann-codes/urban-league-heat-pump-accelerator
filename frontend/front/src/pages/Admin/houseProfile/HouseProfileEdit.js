@@ -53,7 +53,7 @@ const HouseProfileEdit = () => {
 
     reset();
 
-    navigate("../houseprofile/:hid");
+    navigate("../houseprofile/:hid/edit");
   }
 
   return (
@@ -194,7 +194,7 @@ const HouseProfileEdit = () => {
             }}
             fullWidth
             component={Link}
-            to="../houseprofile/:hid"
+            to="../houseprofile/:hid/edit"
           >
             Cancel
           </Button>

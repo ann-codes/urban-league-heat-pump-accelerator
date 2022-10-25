@@ -23,10 +23,10 @@ const AdminContainer = () => {
             path='houseprofile/:hid/'
             element={<HouseProfile />}
           ></Route> */}
-          <Route path='houseprofile' element={<HouseProfile />}>
-              <Route path=':hid' element={<HouseProfileDetail/>} />
-              <Route path='edit' element={<HouseProfileEdit />} />
+          <Route path='houseprofile/:hid' element={<HouseProfile />}>
+              {/* <Route path='edit' element={<HouseProfileEdit />} /> */}
           </Route>
+              <Route path='houseprofile/:hid/edit' element={<HouseProfileEdit />} />
           <Route path='userprofile' element={<UserProfile />}></Route>
           <Route path='*' element={<NoMatch />} />
         </Routes>

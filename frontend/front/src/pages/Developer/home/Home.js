@@ -27,7 +27,6 @@ const Home = () => {
         >
           <Typography variant='h2'>{title}</Typography>
         </Box>
-        Hello
         <Heatpump />
       </Box>
     </Container>
