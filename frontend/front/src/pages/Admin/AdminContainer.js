@@ -5,7 +5,9 @@ import Dashboard from "./dashboard/Dashboard";
 import Nav from "./nav/Nav";
 import UserProfile from "./userProfile/UserProfile";
 import HouseProfile from "./houseProfile/HouseProfile";
+import HouseProfileDetail from "./houseProfile/HouseProfileDetail"
 import HouseProfileEdit from "./houseProfile/HouseProfileEdit"
+import NoMatch from "../../features/noMatch/NoMatch"
 
 const AdminContainer = () => {
   return (
@@ -21,9 +23,12 @@ const AdminContainer = () => {
             path='houseprofile/:hid/'
             element={<HouseProfile />}
           ></Route> */}
-          <Route path='houseprofile/:hid' element={<HouseProfile />}></Route>
-          <Route path='account/:hid/edit' element={<HouseProfileEdit />}></Route>
+          <Route path='houseprofile' element={<HouseProfile />}>
+              <Route path=':hid' element={<HouseProfileDetail/>} />
+              <Route path='edit' element={<HouseProfileEdit />} />
+          </Route>
           <Route path='userprofile' element={<UserProfile />}></Route>
+          <Route path='*' element={<NoMatch />} />
         </Routes>
         {/* <Footer /> */}
       </Box>

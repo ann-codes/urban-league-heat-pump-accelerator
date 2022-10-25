@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography, Stack } from "@mui/material";
 import React from "react";
 import HouseProfileDetail from "./HouseProfileDetail";
 import { Link } from "react-router-dom";
@@ -9,8 +9,9 @@ const HouseProfile = () => {
   const { firstName, lastName, email, address, phoneNumber } = useSelector(
     (state) => state.account
   );
-
+    console.log(firstName)
   const { hid } = useParams();
+
   return (
     <Box>
       <Grid container direction="column" rowSpacing={1}>
@@ -35,15 +36,14 @@ const HouseProfile = () => {
       <Grid container direction="column" rowSpacing={4}>
         <Grid item xs={12}>
           <Box display="flex" mt={3} mb={2} px={2}>
+          <Stack spacing={2} direction="row">
             <Button variant="contained" component={Link} to="edit">
               Edit
             </Button>
-          </Box>
-          <Box p={1} sx={{ borderBottom: "1px dashed grey" }} />
-          <Box display="flex" mt={3} mb={2} px={2}>
-            <Button variant="contained" disabled={true}>
-              Request New Assignment
+            <Button variant="contained">
+              Delete
             </Button>
+            </Stack>
           </Box>
         </Grid>
       </Grid>

@@ -10,6 +10,7 @@ import DevContainer from "./pages/Developer/DevContainer";
 import PublicContainer from "./pages/Public/PublicContainer";
 import SurveyorContainer from "./pages/Surveyor/SurveyorContainer";
 import AdminContainer from "./pages/Admin/AdminContainer";
+import NoMatch from "./features/noMatch/NoMatch"
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path='dev/*' element={<DevContainer />} />
 
           <Route path='admin/*' element={<AdminContainer />} />
+
+          <Route path='*' element={<NoMatch />} />
         </Routes>
       </BrowserRouter>
     </Box>

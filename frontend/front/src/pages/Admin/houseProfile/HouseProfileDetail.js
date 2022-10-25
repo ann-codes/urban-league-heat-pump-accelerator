@@ -2,6 +2,7 @@ import { Box, Stack, Grid, Typography } from "@mui/material";
 import React from "react";
 
 const HouseProfileDetail = (props) => {
+  console.log(props, "<=====")
   return (
     <Grid item xs={12}>
       <Box display="flex" px={2}>
